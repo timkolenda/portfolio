@@ -1,15 +1,54 @@
 
 .header {
     height: calc(100vh + 100px);
-    background-color: red;   
+    height: calc(100vh + 120px);
+    background-color: $primaryColor;   
     position: relative;
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-left:100vw solid $primaryColor;
+        border-bottom:8vw solid white;
+        overflow: hidden;
+    }
+    &__container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+    &__titleName {
+        animation-duration: 2s;
+        margin: auto;
+        text-transform: uppercase;
+        @include secondaryFont(3rem, $typographyColor)
+        &::after{
+            content: "",
+            
+        }
+    }
 }
 
+// .header::after {
+//     content: "";
+//     width: 0;
+//     height: 0;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     border-left:100vw solid $primaryColor;
+//    border-bottom:8vw solid white;
+//    overflow: hidden;
+// }
 
-.diagonalCut {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%);
-}
+
+// .diagonalCut {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     height: 100px;
+//     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%);
+// }
