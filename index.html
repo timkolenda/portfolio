@@ -7,19 +7,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:700|Roboto&amp;subset=greek-ext" rel="stylesheet">
     <link type='image/png' href='images/favicon.png' rel='icon'>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="header" id="particles-js">
         <h2>This is a header</h2>
+        <div class="diagonalCut"></div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
+    <div class="seperatorDiv--top"></div>
     <main>
         <section>
             <h2>This is an about section</h2>
         </section>
-        <section>
-            <h2>This is my work</h2>
+        <section class="projects">
+            <div class="projects__coverImages">
+                <div class="projects_coverImage projects_coverImage--1">
+                    <figure>
+                        
+                        <img src="http://via.placeholder.com/200x200" alt="">
+                    </figure>
+                </div>
+                <div class="projects_coverImage projects_coverImage--2">
+                    <figure>
+                        <img src="http://via.placeholder.com/200x200" alt="">
+                    </figure>
+                </div>
+                <div class="projects_coverImage projects_coverImage--3">
+                    <figure>
+                        <img src="http://via.placeholder.com/200x200" alt="">
+                    </figure>
+                </div>
+                <div class="projects_coverImage projects_coverImage--4">
+                    <figure>
+                        <img src="http://via.placeholder.com/200x200" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="projects__projectDetails">
+                <div class="projects__summery">
+                    <div class="projects__description">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremque reprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi esse asperiores incidunt?</p>
+                    </div>
+                    <figure class="projects__image">
+                        <img src="" alt="">
+                    </figure>
+                </div>
+                <div class="projects_coverImage projects_coverImage--2">
+                    <div class="projects__description">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremquereprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi esse asperiores incidunt?</p>
+                    </div>
+                    <figure class="projects__image">
+                        <img src="" alt="">
+                    </figure>
+                </div>
+                <div class="projects_coverImage projects_coverImage--3">
+                    <div class="projects__description">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremque reprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi ess asperiores incidunt?</p>
+                    </div>
+                    <figure class="projects__image">
+                        <img src="" alt="">
+                    </figure>
+                </div>
+                <div class="projects_coverImage projects_coverImage--4">
+                    <div class="projects__description">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremque reprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi esse asperiores incidunt?</p>
+                    </div>
+                    <figure class="projects__image">
+                        <img src="" alt="">
+                    </figure>
+                </div>
+            </div>
         </section>
         <section>
             <h2>Skillz</h2>
@@ -31,6 +105,14 @@
 
 
 
+
+
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js">
+    </script>
+
+    <script>
+        particlesJS.load("particles-js", "assets/particles.json", function () { });
+    </script>
 </body>
 </html>
