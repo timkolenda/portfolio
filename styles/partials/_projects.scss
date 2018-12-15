@@ -1,1 +1,42 @@
 
+.projects {
+    background: $secondaryColor;
+    position: relative;
+    padding: 100px 0 100px 0;
+    // height: 1000px;
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-right:100vw solid $transparent;
+        border-bottom:8vw solid $primaryColor;
+        overflow: hidden;
+    }
+    &__projectDetails {
+        padding: 100px 0;
+    }
+    &__summery {
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        &.switch{
+            flex-direction: row-reverse;
+            .projects__description {
+                text-align: left;
+            }
+        }
+    }
+    &__description {
+        text-align: right;
+        width: 40%;
+    }
+    &__imageContainer {
+        background-color: $primaryColor;
+        width: 60%;
+        height: 300px;
+    }
+}

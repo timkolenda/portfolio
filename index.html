@@ -11,6 +11,7 @@
     <link type='image/png' href='images/favicon.png' rel='icon'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 <body>
     <header class="header">
@@ -33,14 +34,99 @@
     <div class="seperatorDiv--top"></div>
     <main>
         <section class="about">
-            <h2>This is an about section</h2>
+            <div class="sectionHeading">
+                <div class="sectionHeading__titleLeader">
+                    <p>who am i</p>
+                </div>
+                <div class="sectionHeading__title">
+                    <h2>Hello</h2>
+                </div>
+            </div>
+
         </section>
-        <section>
-            <h2>Skillz</h2>
+        <section class="skills">
+            <div class="wrapper">
+                <div class="sectionHeading">
+                    <div class="sectionHeading__titleLeader">
+                        <p>my skills</p>
+                    </div>
+                    <div class="sectionHeading__title">
+                        <h2>Toolbox</h2>
+                    </div>
+                </div>
+                <div class="toolbox">
+                    <div class="toolbox__shelf">
+                        <div class="toolbox__tool">
+                            <i class="devicon-html5-plain"></i>
+                            <p class="toolbox__name">HTML 5</p>
+                        </div>
+                        <div class="toolbox__tool">
+                            <i class="devicon-css3-plain"></i>
+                            <p class="toolbox__name">CSS 3</p>
+                        </div>
+                    </div>
+                    <div class="toolbox__shelf">
+                        <div class="toolbox__tool">
+                            <i class="devicon-javascript-plain"></i>
+                            <p class="toolbox__name">Javascript</p>
+                        </div>
+                        <div class="toolbox__tool">
+                            <i class="devicon-jquery-plain"></i>
+                            <p class="toolbox__name">jquery</p>
+                        </div>
+                    </div>
+                    <div class="toolbox__shelf">
+                        <div class="toolbox__tool">
+                            <i class="devicon-react-original"></i>
+                            <p class="toolbox__name">React</p>
+                        </div>
+                        <div class="toolbox__tool">
+                            <i class="devicon-nodejs-plain"></i>
+                            <p class="toolbox__name">Node.JS</p>
+                        </div>
+                    </div>
+                    <div class="toolbox__shelf">
+                        <div class="toolbox__tool">
+                            <i class="devicon-sass-original"></i>
+                            <p class="toolbox__name">SASS</p>
+                        </div>
+                        <div class="toolbox__tool">
+                            <i class="devicon-gulp-plain"></i>
+                            <p class="toolbox__name">Gulp</p>
+                        </div>
+                    </div>
+                    <div class="toolbox__shelf">
+                        <div class="toolbox__tool">
+                            <i class="devicon-github-plain"></i>
+                            <p class="toolbox__name">Github</p>
+                        </div>
+                        <div class="toolbox__tool">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="256px" height="351px" viewBox="0 0 256 351" enable-background="new 0 0 256 351" xml:space="preserve">
+                                <path fill="#fff" d="M0,282.998l2.123-2.973L102.527,89.512l0.212-2.017L58.479,4.358c-3.708-6.964-14.148-5.204-15.365,2.592
+                            	L0,282.998z" />
+                                <path fill="#fff" d="M135.005,150.381l32.955-33.751l-32.964-62.93c-3.13-5.957-11.867-5.974-14.963,0l-17.612,33.589v2.861
+                            	L135.005,150.381z" />
+                                <path fill="#fff" d="M139.121,347.551l116.275-64.848L222.191,78.209c-1.039-6.398-8.888-8.928-13.467-4.34L0,282.998
+                            	l115.608,64.547C122.915,351.625,131.812,351.627,139.121,347.551" />
+                            </svg>
+                            <p class="toolbox__name">Firebase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="projects">
             <div class="wrapper">
-                <div class="projects__coverImages">
+                <div class="sectionHeading">
+                    <div class="sectionHeading__titleLeader">
+                        <p>awesome projects</p>
+                    </div>
+                    <div class="sectionHeading__title">
+                        <h2>My Work</h2>
+                    </div>
+                </div>
+                <!-- <div class="projects__coverImages">
                     <div class="projects_coverImage projects_coverImage--1">
                         <figure>                            
                             <img src="http://via.placeholder.com/200x200" alt="">
@@ -61,44 +147,66 @@
                             <img src="http://via.placeholder.com/200x200" alt="">
                         </figure>
                     </div>
-                </div>
+                </div> -->
                 <div class="projects__projectDetails">
                     <div class="projects__summery">
                         <div class="projects__description">
                             <h3>Lorem ipsum dolor sit amet.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremque reprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi esse asperiores incidunt?</p>
+                            <a href="">live project</a>
                         </div>
-                        <figure class="projects__image">
-                            <img src="" alt="">
-                        </figure>
+                        <div class="projects__imageContainer">
+                            <figure class="projects__image">
+                                <img src="" alt="">
+                            </figure>
+                        </div>
                     </div>
-                    <div class="projects_coverImage projects_coverImage--2">
+                    <div class="projects__summery switch">
                         <div class="projects__description">
                             <h3>Lorem ipsum dolor sit amet.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremquereprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi esse asperiores incidunt?</p>
+                            <a href="">live project</a>
                         </div>
-                        <figure class="projects__image">
-                            <img src="" alt="">
-                        </figure>
+                        <div class="projects__imageContainer">
+                            <figure class="projects__image">
+                                <img src="" alt="">
+                            </figure>
+                        </div>
                     </div>
-                    <div class="projects_coverImage projects_coverImage--3">
+                    <div class="projects__summery">
                         <div class="projects__description">
                             <h3>Lorem ipsum dolor sit amet.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremque reprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi ess asperiores incidunt?</p>
+                            <a href="">live project</a>
                         </div>
-                        <figure class="projects__image">
-                            <img src="" alt="">
-                        </figure>
+                        <div class="projects__imageContainer">
+                            <figure class="projects__image">
+                                <img src="" alt="">
+                            </figure>
+                        </div>
                     </div>
-                    <div class="projects_coverImage projects_coverImage--4">
+                    <div class="projects__summery switch">
                         <div class="projects__description">
                             <h3>Lorem ipsum dolor sit amet.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eveniet, consequatur saepe cum doloremque reprehenderit dolore. Quae totam mollitia quod quis, vitae, magnam, labore placeat sequi quasi esse asperiores incidunt?</p>
+                            <a href="">live project</a>
                         </div>
-                        <figure class="projects__image">
-                            <img src="" alt="">
-                        </figure>
+                        <div class="projects__imageContainer">
+                            <figure class="projects__image">
+                                <img src="" alt="">
+                            </figure>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="sectionHeading">
+                <div class="sectionHeading__titleLeader">
+                    <p>let's talk</p>
+                </div>
+                <div class="sectionHeading__title">
+                    <h2>Contact</h2>
                 </div>
             </div>
         </section>

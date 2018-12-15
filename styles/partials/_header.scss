@@ -28,7 +28,7 @@
         &::before{
             content: "";
             position: absolute;
-            background-color: #BFFF53;
+            background-color: $primaryAccentColor;
             height: 4px;    
             animation-name: beforeLineMovement;
             animation-duration: 6s;
@@ -72,7 +72,7 @@
 
 
 
-// ================= keyFrames =======================
+//================= keyFrames =======================
 
 @keyframes afterLineMovement{
     0% {

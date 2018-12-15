@@ -1,4 +1,17 @@
 
 .about{
     background-color: $secondaryColor;
+    position: relative;
+    padding: 100px 0 100px 0;
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-right:100vw solid $transparent;
+        border-bottom:8vw solid $primaryColor;
+        overflow: hidden;
+    }
 }
