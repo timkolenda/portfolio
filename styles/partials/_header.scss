@@ -12,7 +12,7 @@
         bottom: 0;
         left: 0;
         border-left:100vw solid $primaryColor;
-        border-bottom:8vw solid white;
+        border-bottom:8vw solid $secondaryColor;
         overflow: hidden;
     }
     &__container {
@@ -21,34 +21,126 @@
         display: flex;
     }
     &__titleName {
-        animation-duration: 2s;
+        @include secondaryFont(3rem, $typographyColor);
+        position: relative;
         margin: auto;
         text-transform: uppercase;
-        @include secondaryFont(3rem, $typographyColor)
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: #BFFF53;
+            height: 4px;    
+            animation-name: beforeLineMovement;
+            animation-duration: 6s;
+            animation-delay: 2s;
+            right: 0;
+            bottom: 60%;
+            animation-fill-mode: forwards; 
+        }
         &::after{
-            content: "",
-            
+            content: "";
+            position: absolute;
+            background-color: #BFFF53;
+            height: 4px;    
+            animation-name: afterLineMovement;
+            animation-duration: 6s;
+            animation-delay: 2s;
+            right: 0;
+            bottom: 60%;
+            animation-fill-mode: forwards; 
+        }
+    }
+    &__title {
+        // position: absolute;
+        animation-name: rotateHeader;
+        animation-delay: 4s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        display: flex;
+        flex-direction: column;
+        font-size: 6rem;
+        .lastName {
+            // animation-name: lastNameGrow;
+            // animation-delay: 6s;
+            font-size: 9rem;
         }
     }
 }
 
-// .header::after {
-//     content: "";
-//     width: 0;
-//     height: 0;
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     border-left:100vw solid $primaryColor;
-//    border-bottom:8vw solid white;
-//    overflow: hidden;
-// }
 
 
-// .diagonalCut {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     height: 100px;
-//     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%);
-// }
+
+
+
+// ================= keyFrames =======================
+
+@keyframes afterLineMovement{
+    0% {
+        width: 0;
+    }
+    33.33% {
+        width: 100%;
+        transform: rotate(0);
+    }
+    66% {
+        transform: rotate(-90deg);
+        width: 100%;
+    }
+    80% {
+        transform: rotate(-90deg);
+        width: 100%;
+        bottom: 58%;
+        right: 4%;
+    }
+    100% {
+        transform: rotate(-135deg);
+        width: 10%;
+        right: 43.25%;
+        bottom: -150%;
+    }
+}
+
+@keyframes beforeLineMovement{
+    0% {
+        width: 0;
+    }
+    33.3333% {
+        width: 100%;
+        transform: rotate(0);
+    }
+    66% {
+        transform: rotate(-90deg);
+        width: 100%;
+    }
+    80% {
+        transform: rotate(-90deg);
+        width: 100%;
+        bottom: 58%;
+        right: 4%;
+    }
+    100% {
+        transform: rotate(-45deg);
+        width: 10%;
+        right: 36.75%;
+        bottom: -150%
+    }
+}
+
+@keyframes rotateHeader{
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes lastNameGrow{
+    from {
+        font-size: 3rem;
+    }
+    to{
+        font-size: 6rem;
+    }
+}
+
