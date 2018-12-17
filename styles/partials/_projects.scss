@@ -34,23 +34,24 @@
         // }
     }
     &__description {
-        position: absolute;
-        left: 0;
-        background: linear-gradient(rgba(255,255,255, 0.2));
+        // position: absolute;
+        // left: 0;
+        // background: linear-gradient(rgba(255,255,255, 0.2));
         border-radius: 10px;
         text-align: right;
         width: 45%;
         padding: 20px;
         // display: none;
         h3 {
-            @include secondaryFont(3rem, $typographyColor);
-            font-weight: 400;
+            @include primaryFont(3rem, $typographyColor);
+            // font-weight: 400;
         }
         p {
             font-size: 1.6rem;
+            line-height: 1.4;
         }
         a{
-            @include secondaryFont(2rem, $primaryAccentColor);
+            @include primaryFont(2rem, $primaryAccentColor);
             text-transform: uppercase;
             text-align: center;
         }
@@ -59,35 +60,50 @@
             flex-direction: row;
             .projects__description {
                 text-align: left;
-                position: absolute;
-                left: auto;
-                right: 0;
+                // position: absolute;
+                // left: auto;
+                // right: 0;
 
             }
         }
     &__image {
-        width: 80%;
+        // width: 80%;
         margin: 0 auto;
     }
     &__imageContainer {
-        background-color: $primaryColor;
+        // background-color: $primaryColor;
         width: 60%;
         border-radius: 10px;
         // height: 400px;
     }
     &__tools {
+        @include secondaryFont(inherit, $typographyColor);
         line-height: 2.5;
-        // display: flex;
-        // flex-wrap: wrap;
+        font-weight: bold;
+        text-transform: uppercase;
         span {
-            background: $primaryAccentColor;
-            color: black;
-            font-weight: bold;
-            text-transform: uppercase;
+            color: $primaryAccentColor;
+        }
+    }
+    &__links {
+        @include primaryFont(2rem, black);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-transform: uppercase;
+        padding-top: 10px;
+        a {
+            font-weight: 700;
             padding: 5px;
             margin: 0 2px;
             border-radius: 5px;
-
+            color: black;
+            background: $primaryAccentColor;
+            border: 2px solid $secondaryColor;
+            &:hover {
+                color: $primaryAccentColor;
+                background: $secondaryColor;
+                border: 2px solid $primaryAccentColor;
+            }
         }
     }
 }

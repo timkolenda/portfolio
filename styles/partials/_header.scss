@@ -21,7 +21,8 @@
         display: flex;
     }
     &__titleName {
-        @include secondaryFont(3rem, $typographyColor);
+        @include primaryFont(3rem, $typographyColor);
+        font-weight: bold;
         position: relative;
         margin: auto;
         text-transform: uppercase;

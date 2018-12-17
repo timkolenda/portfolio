@@ -291,10 +291,11 @@ a {
 
 .header__titleName {
   font-size: 3rem;
-  font-family: 'Fira Mono', serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
+  font-weight: bold;
   position: relative;
   margin: auto;
   text-transform: uppercase;
@@ -557,8 +558,10 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 1000px;
   padding: 100px 0 100px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .toolbox__shelf {
@@ -572,7 +575,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25%;
 }
 
 .toolbox__shelf .white {
@@ -645,10 +647,6 @@ a {
 }
 
 .projects__description {
-  position: absolute;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)));
-  background: linear-gradient(rgba(255, 255, 255, 0.2));
   border-radius: 10px;
   text-align: right;
   width: 45%;
@@ -657,22 +655,22 @@ a {
 
 .projects__description h3 {
   font-size: 3rem;
-  font-family: 'Fira Mono', serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
-  font-weight: 700;
-  text-decoration: none;
   font-weight: 400;
+  text-decoration: none;
 }
 
 .projects__description p {
   font-size: 1.6rem;
+  line-height: 1.4;
 }
 
 .projects__description a {
   font-size: 2rem;
-  font-family: 'Fira Mono', serif;
+  font-family: 'Roboto', sans-serif;
   color: #BFFF53;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -687,34 +685,58 @@ a {
 
 .projects__summery.switch .projects__description {
   text-align: left;
-  position: absolute;
-  left: auto;
-  right: 0;
 }
 
 .projects__image {
-  width: 80%;
   margin: 0 auto;
 }
 
 .projects__imageContainer {
-  background-color: #090909;
   width: 60%;
   border-radius: 10px;
 }
 
 .projects__tools {
+  font-size: inherit;
+  font-family: 'Fira Mono', serif;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
   line-height: 2.5;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .projects__tools span {
-  background: #BFFF53;
+  color: #BFFF53;
+}
+
+.projects__links {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
   color: black;
+  font-weight: 400;
+  text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.projects__links a {
+  font-weight: 700;
   padding: 5px;
   margin: 0 2px;
   border-radius: 5px;
+  color: black;
+  background: #BFFF53;
+  border: 2px solid #212121;
+}
+
+.projects__links a:hover {
+  color: #BFFF53;
+  background: #212121;
+  border: 2px solid #BFFF53;
 }
 
 .contact {
