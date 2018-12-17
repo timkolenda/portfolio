@@ -19,10 +19,9 @@
         padding: 100px 0;
     }
     &__summery {
-        border: 1px solid red;
         display: flex;
         align-items: center;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         &.switch{
             flex-direction: row-reverse;
             .projects__description {
@@ -33,10 +32,22 @@
     &__description {
         text-align: right;
         width: 40%;
+        h3 {
+            @include secondaryFont(3.5rem, $typographyColor);
+            font-weight: 400;
+        }
+        p {
+            font-size: 2rem;
+        }
+        a{
+            @include secondaryFont(2rem, $primaryAccentColor);
+            text-transform: uppercase;
+            text-align: center;
+        }
     }
     &__imageContainer {
         background-color: $primaryColor;
         width: 60%;
-        height: 300px;
+        height: 400px;
     }
 }

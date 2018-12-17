@@ -9,6 +9,8 @@
         align-self: flex-end;
         border-left: 2px solid $primaryAccentColor;
         p {
+            @include secondaryFont(1.6rem, $typographyColor);
+            font-weight: 400;
             padding: 35px 0 0 10px;
             margin: 0;
         }
@@ -19,7 +21,8 @@
         width: 100%;
         h2{
             text-align: center;
-            @include secondaryFont(6rem, $typographyColor);
+            @include primaryFont(6rem, $typographyColor);
+            font-weight: bold;
             text-transform: uppercase;
         }
     }

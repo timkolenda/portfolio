@@ -231,6 +231,12 @@ a {
 }
 
 .sectionHeading__titleLeader p {
+  font-size: 1.6rem;
+  font-family: 'Fira Mono', serif;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-weight: 400;
   padding: 35px 0 0 10px;
   margin: 0;
 }
@@ -248,10 +254,11 @@ a {
 .sectionHeading__title h2 {
   text-align: center;
   font-size: 6rem;
-  font-family: 'Fira Mono', serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -623,14 +630,13 @@ a {
 }
 
 .projects__summery {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .projects__summery.switch {
@@ -649,10 +655,33 @@ a {
   width: 40%;
 }
 
+.projects__description h3 {
+  font-size: 3.5rem;
+  font-family: 'Fira Mono', serif;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.projects__description p {
+  font-size: 2rem;
+}
+
+.projects__description a {
+  font-size: 2rem;
+  font-family: 'Fira Mono', serif;
+  color: #BFFF53;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .projects__imageContainer {
   background-color: #090909;
   width: 60%;
-  height: 300px;
+  height: 400px;
 }
 
 .contact {
