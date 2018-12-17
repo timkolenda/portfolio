@@ -24,27 +24,15 @@
         padding-bottom: 50px;
         flex-direction: row-reverse;
         position: relative;
-        // &.switch{
-        //     flex-direction: row;
-        //     .projects__description {
-        //         text-align: left;
-        //         position: absolute;
-        //         right: 0;
-        //     }
-        // }
     }
     &__description {
-        // position: absolute;
-        // left: 0;
-        // background: linear-gradient(rgba(255,255,255, 0.2));
         border-radius: 10px;
         text-align: right;
         width: 45%;
         padding: 20px;
-        // display: none;
         h3 {
             @include primaryFont(3rem, $typographyColor);
-            // font-weight: 400;
+            text-transform: uppercase;
         }
         p {
             font-size: 1.6rem;
@@ -60,9 +48,6 @@
             flex-direction: row;
             .projects__description {
                 text-align: left;
-                // position: absolute;
-                // left: auto;
-                // right: 0;
 
             }
         }
