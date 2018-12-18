@@ -6,6 +6,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,6 +68,10 @@ h1,h2,h3,h4 {
 a {
     color: inherit;
     text-decoration: inherit;
+}
+
+section {
+    padding: 50px 0;
 }
 
 .wrapper {

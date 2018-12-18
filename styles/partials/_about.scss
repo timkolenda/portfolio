@@ -2,7 +2,6 @@
 .about{
     background-color: $secondaryColor;
     position: relative;
-    padding: 100px 0 100px 0;
     &::after {
         content: "";
         width: 0;
@@ -14,4 +13,18 @@
         border-bottom:8vw solid $primaryColor;
         overflow: hidden;
     }
+    &__section {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__image{
+        width: 50%;
+    }
+    &__content{
+        position: absolute;
+        right: 0;
+        width: 55%;
+    }
 }
+

@@ -14,9 +14,10 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="siteNav">
             <div class="siteNav__button">
                 <div class="siteNav__navWheel">
@@ -36,23 +37,36 @@
         <div class="header__container">
             <div class="header__titleName animated fadeInLeft delay-1s">
                 <h1 class="header__title"><span>Tim</span><span class="lastName">Kolenda</span></h1>
+                <h4 class="header__subheading">web developer</h4>
             </div>  
         </div>
     </header>
     <div class="seperatorDiv--top"></div>
     <main>
-        <section class="about">
-            <div class="sectionHeading">
-                <div class="sectionHeading__titleLeader">
-                    <p>who am i</p>
+        <section class="about" id="about">
+            <div class="wrapper">
+                <div class="sectionHeading">
+                    <div class="sectionHeading__titleLeader">
+                        <p>who am i</p>
+                    </div>
+                    <div class="sectionHeading__title">
+                        <h2>Hello</h2>
+                    </div>
                 </div>
-                <div class="sectionHeading__title">
-                    <h2>Hello</h2>
-                </div>
+                <div class="about__section">
+                    <div class="about__image">
+                        <img src="https://fillmurray.com/200/300" alt="">
+                    </div>
+                    <div class="about__content">
+                        <p>Hi there, I’m Tim Kolenda and I’m a front end developer from Toronto. I am passionate about writing beautiful code and well designed sites.</p>
+                        <p>I believe that great design surprises and delights without sacrificing utility. That is the type of internet I like to use, and it’s what I strive to create.</p>
+                        <p>Get in touch! Let’s make something cool together.</p>
+                    </div>
+                </div>            
             </div>
 
         </section>
-        <section class="skills">
+        <section class="skills" id="tools">
             <div class="wrapper">
                 <div class="sectionHeading">
                     <div class="sectionHeading__titleLeader">
@@ -124,7 +138,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="wrapper">
                 <div class="sectionHeading">
                     <div class="sectionHeading__titleLeader">
@@ -158,12 +172,12 @@
                 </div> -->
                 <div class="projects__projectDetails">
                     <div class="projects__summery">
-                        <div class="projects__imageContainer">
+                        <div class="projects__imageContainer" data-aos="fade-right" data-aos-delay="500">
                             <figure class="projects__image">
                                 <img src="assets/project_images/P4-Desktop-mobile.png" alt="An image of the 'Two Thumbs Down' app displayed on both a laptop and an iphone.">
                             </figure>
                         </div>
-                        <div class="projects__description">
+                        <div class="projects__description" data-aos="fade-left" data-aos-delay="500">
                             <h3>API driven app that finds an actor's worst movie</h3>
                             <p>Two Thumbs Down uses the MovieDB API to take any actors name and return the details and trailer for that actors worst film.</p>
                             <div class="projects__tools">
@@ -176,12 +190,12 @@
                         </div>
                     </div>
                     <div class="projects__summery switch">
-                        <div class="projects__imageContainer">
+                        <div class="projects__imageContainer" data-aos="fade-left" data-aos-delay="500">
                             <figure class="projects__image">
                                 <img src="assets/project_images/P2-Desktop-mobile.png" alt="An image of the 'Sophie' portfolio example displayed on both a laptop and an iphone.">
                             </figure>
                         </div>
-                        <div class="projects__description">
+                        <div class="projects__description" data-aos="fade-right" data-aos-delay="500">
                             <h3>Clean PSD Conversion</h3>
                             <p>Sophie is a mocked up website portfolio converted from a PSD file. It was made to be fully responsive</p>
                             <div class="projects__tools">
@@ -194,12 +208,12 @@
                         </div>
                     </div>
                     <div class="projects__summery">
-                        <div class="projects__imageContainer">
+                        <div class="projects__imageContainer" data-aos="fade-right" data-aos-delay="500">
                             <figure class="projects__image">
                                 <img src="assets/project_images/P5-Desktop-mobile.png" alt="An image of the 'RPSLS' app displayed on both a laptop and an iphone.">
                             </figure>
                         </div>
-                        <div class="projects__description">
+                        <div class="projects__description" data-aos="fade-left" data-aos-delay="500">
                             <h3>React based rock, paper, scissors, card game</h3>
                             <p>Built using React and Firebase, this rock, paper, scissors game records and displays the highest score and has a interactive state based UI</p>
                             <div class="projects__tools">
@@ -212,12 +226,12 @@
                         </div>
                     </div>
                     <div class="projects__summery switch">
-                        <div class="projects__imageContainer">
+                        <div class="projects__imageContainer" data-aos="fade-left" data-aos-delay="500">
                             <figure class="projects__image">
                                 <img src="assets/project_images/P6-Desktop-mobile.png" alt="An image of the 'MIDDL' app displayed on both a laptop and an iphone.">
                             </figure>
                         </div>
-                        <div class="projects__description">
+                        <div class="projects__description" data-aos="fade-right" data-aos-delay="500">
                             <h3>React Dating App</h3>
                             <p>Using a Firebase backend, this app will provide users with date recommendation based on their location. It allows a user to send invites to other users and make plans through a live chat</p>
                             <div class="projects__tools">
@@ -232,7 +246,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="sectionHeading">
                 <div class="sectionHeading__titleLeader">
                     <p>let's talk</p>
@@ -254,8 +268,13 @@
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        particlesJS.load("particles-js", "assets/particles.json", function () { });
+        AOS.init();
     </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.8/SmoothScroll.js"></script> -->
+    <!-- <script>
+        particlesJS.load("particles-js", "assets/particles.json", function () { });
+    </script> -->
 </body>
 </html>

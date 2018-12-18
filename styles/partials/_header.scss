@@ -66,6 +66,14 @@
             font-size: 9rem;
         }
     }
+    &__subheading {
+        @include secondaryFont(3rem, $primaryAccentColor);
+        text-transform: lowercase;
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -10px;
+        bottom: -12%;
+    }
 }
 
 

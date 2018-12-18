@@ -167,6 +167,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -206,6 +207,10 @@ a {
   text-decoration: inherit;
 }
 
+section {
+  padding: 50px 0;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 80%;
@@ -239,6 +244,10 @@ a {
   margin: 20px 20px 0 0;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+.siteNav__button:hover {
+  cursor: pointer;
 }
 
 .siteNav__navWheel {
@@ -289,12 +298,26 @@ a {
 }
 
 .siteNav__navItem {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Fira Mono', serif;
   color: white;
   font-weight: 700;
   text-decoration: none;
   visibility: hidden;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: relative;
+  right: 10px;
+}
+
+.siteNav__navItem a {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.siteNav__navItem a:hover {
+  color: #BFFF53;
 }
 
 .siteNav.active .siteNav__navWheel {
@@ -312,16 +335,17 @@ a {
 }
 
 .siteNav.active .siteNav__navBar {
-  height: 80vh;
-  padding-top: 30;
+  height: 90vh;
+  padding-top: 50px;
 }
 
 .siteNav.active .siteNav__navItem {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
   visibility: visible;
 }
 
 .sectionHeading {
-  padding-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,6 +488,20 @@ a {
 
 .header__title .lastName {
   font-size: 9rem;
+}
+
+.header__subheading {
+  font-size: 3rem;
+  font-family: 'Fira Mono', serif;
+  color: #BFFF53;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: lowercase;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  right: -10px;
+  bottom: -12%;
 }
 
 @-webkit-keyframes afterLineMovement {
@@ -629,7 +667,6 @@ a {
 .about {
   background-color: #212121;
   position: relative;
-  padding: 100px 0 100px 0;
 }
 
 .about::after {
@@ -642,6 +679,26 @@ a {
   border-right: 100vw solid rgba(0, 0, 0, 0);
   border-bottom: 8vw solid #090909;
   overflow: hidden;
+}
+
+.about__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.about__image {
+  width: 50%;
+}
+
+.about__content {
+  position: absolute;
+  right: 0;
+  width: 55%;
 }
 
 .skills {
