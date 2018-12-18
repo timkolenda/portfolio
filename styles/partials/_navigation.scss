@@ -3,14 +3,20 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    // position: relative;
     &__button {
+        position: fixed;
+        z-index: 9;
         display: flex;
         justify-content: flex-end;
+        align-items: flex-end;
         width: 50px;
         height: 50px;
-        margin: 20px 20px 0 0; 
+        margin: 20px 20px 0 0;  
+        transition: all 1s;
     }
     &__navWheel {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,7 +25,60 @@
         border-radius: 50%;
         background-color: $primaryAccentColor;
         color: $primaryColor;
-        transition: all;
+        transition: all 1s;        
+    }
+    &__chevron {
+        transition: all 1s;
+        transform: rotate(0deg);
+        // // animation-name: chevronRotation;
+        // animation-duration: 1s;
+        // animation-delay: 0;
+    }
+    &__nav {
+        
+    }
+    &__navBar {
+        position: absolute;
+        right: 0;
+        // padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $primaryAccentColor;
+        width: 2px;
+        height: 0;
+        // visibility: hidden;
+        transition: all 1s;
+    }
+    &__navItem {
+        @include secondaryFont(1rem, $typographyColor);
+        visibility: hidden;
     }
 
+    &.active {
+        .siteNav {
+            &__button {
+                
+            }
+            &__navWheel {
+                width: 25px;
+                height: 25px;
+            }
+            &__chevron {
+                transform: rotate(900deg);
+            }
+            &__siteNav{
+                height: 90vh;
+            }
+            &__navBar {
+                height: 80vh;
+                padding-top: 30;
+            }
+            &__navItem {
+                visibility: visible;
+            }
+        }        
+    }
 }
+
+

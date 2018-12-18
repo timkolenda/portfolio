@@ -223,18 +223,26 @@ a {
 }
 
 .siteNav__button {
+  position: fixed;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 50px;
   height: 50px;
   margin: 20px 20px 0 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .siteNav__navWheel {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,8 +257,67 @@ a {
   border-radius: 50%;
   background-color: #BFFF53;
   color: #090909;
-  -webkit-transition: all;
-  transition: all;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.siteNav__chevron {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.siteNav__navBar {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #BFFF53;
+  width: 2px;
+  height: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.siteNav__navItem {
+  font-size: 1rem;
+  font-family: 'Fira Mono', serif;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  visibility: hidden;
+}
+
+.siteNav.active .siteNav__navWheel {
+  width: 25px;
+  height: 25px;
+}
+
+.siteNav.active .siteNav__chevron {
+  -webkit-transform: rotate(900deg);
+          transform: rotate(900deg);
+}
+
+.siteNav.active .siteNav__siteNav {
+  height: 90vh;
+}
+
+.siteNav.active .siteNav__navBar {
+  height: 80vh;
+  padding-top: 30;
+}
+
+.siteNav.active .siteNav__navItem {
+  visibility: visible;
 }
 
 .sectionHeading {
