@@ -5,16 +5,17 @@
     width: 100%;
     &__button {
         position: fixed;
+        right: 20px;
         z-index: 9;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         width: 50px;
         height: 50px;
-        margin: 20px 20px 0 0;  
+        margin: 20px 0px 0 0;  
         transition: all 1s;
         &:hover {
-            cursor: pointer;
+            cursor: pointer;    
         }
     }
     &__navWheel {
@@ -32,39 +33,59 @@
     &__chevron {
         transition: all 1s;
         transform: rotate(0deg);
+        // transform: rotate(0deg) translateX(50%) translateY(-50%);
+        // color: red;
+        position: absolute;
+        // top: 50%;
+        // right: 50%;
         // // animation-name: chevronRotation;
         // animation-duration: 1s;
         // animation-delay: 0;
     }
     &__navBar {
-        position: absolute;
-        right: 0;
-        // padding-top: 0;
+        position: relative;
+        top: -2px;
+        right: -16px;
+        // padding-right: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         justify-content: space-between;
-        background-color: $primaryAccentColor;
-        width: 2px;
-        height: 0;
+        background: linear-gradient(to bottom, rgba(191, 255, 83, 0) 0%, rgba(191, 255, 83, 0) calc(100% - 2px), rgba(191, 255, 83, 1) calc(100% - 2px));
+        width: 0;
+        height: 17px;
         // visibility: hidden;
         transition: all 1s;
+        transform: rotate(-90deg);
+        margin-top: 100%;
     }
     &__navItem {
-        @include secondaryFont(1.2rem, $typographyColor);
+        color: white;
+        // border: 1px solid red;
+        // transform: translate(120px, 50%);
+        // transform: rotate(-90deg);
+        // height: calc(100vh / 4);
+        // margin-top: 100px;
+        @include primaryFont(1.4rem, white);
+        // background-color:$primaryAccentColor;
+        border-radius: 2px;
+        text-transform: uppercase;
         visibility: hidden;
-        transform: rotate(-90deg);
         position: relative;
-        right: 10px;
+        // height: 100px;
+        // right: 10px;
+        // bottom: 50%;
         a {
-            white-space: nowrap;
+            // position: relative;
+            // right: 50%;
+            // white-space: nowrap;
             overflow: hidden;
-            padding: 10px;
+            padding: 10px 0;
             &:hover{
                 color: $primaryAccentColor;
             }
         }
     }
-
+    
     &.active {
         .siteNav {
             &__navWheel {
@@ -73,17 +94,26 @@
             }
             &__chevron {
                 transform: rotate(900deg);
+                // transform: rotate(900deg) translateX(-50%) translateY(50%);
             }
             &__siteNav{
-                height: 90vh;
+                // right: -4px;
+                // height: 90vh;
+                // width: 90vh;
+                // transform: rotate(-90deg);
             }
             &__navBar {
-                height: 90vh;
-                padding-top: 50px;
+                width: 90vh;
+                right: -4px;
+                // padding-top: 50px;                
             }
             &__navItem {
+                // transform: rotate(-90deg);
                 transition-delay: 1s;
                 visibility: visible;
+                &--home{
+                    padding-right: 20px;
+                }
             }
         }        
     }

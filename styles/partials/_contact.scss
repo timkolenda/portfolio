@@ -1,4 +1,60 @@
 
 .contact {
-    background-color: $primaryColor;   
+    background-color: $primaryColor;  
+    input, select, textarea {
+        color: $typographyColor;
+        border: none;
+        padding: 10px;
+        border-bottom: 2px solid $primaryAccentColor;
+        background: $secondaryColor;
+        margin: 20px;
+    } 
+    label {
+        visibility: hidden;
+        width: 0;
+    }
+    &__formContent {
+        padding: 50px 0;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &__myForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__senderInfo {
+        width: 100%;
+        display: flex;
+        input {
+            width: 50%;
+        }
+    }
+    &__emailContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__button {
+        @include primaryFont(2rem, black);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-transform: uppercase;
+        // padding-top: 10px;
+        font-weight: 700;
+
+        padding: 20px;
+        margin: 0 auto;
+        border-radius: 5px;
+        color: black; 
+        background: $primaryAccentColor;
+        border: 2px solid $secondaryColor;
+        &:hover {
+            color: $primaryAccentColor;
+            background: $secondaryColor;
+            border: 2px solid $primaryAccentColor;
+        }
+    }
 }
+

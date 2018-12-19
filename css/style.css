@@ -229,6 +229,7 @@ section {
 
 .siteNav__button {
   position: fixed;
+  right: 20px;
   z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,7 +242,7 @@ section {
           align-items: flex-end;
   width: 50px;
   height: 50px;
-  margin: 20px 20px 0 0;
+  margin: 20px 0px 0 0;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -275,45 +276,49 @@ section {
   transition: all 1s;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  position: absolute;
 }
 
 .siteNav__navBar {
-  position: absolute;
-  right: 0;
+  position: relative;
+  top: -2px;
+  right: -16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #BFFF53;
-  width: 2px;
-  height: 0;
+  background: linear-gradient(to bottom, rgba(191, 255, 83, 0) 0%, rgba(191, 255, 83, 0) calc(100% - 2px), #bfff53 calc(100% - 2px));
+  width: 0;
+  height: 17px;
   -webkit-transition: all 1s;
   transition: all 1s;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-top: 100%;
 }
 
 .siteNav__navItem {
-  font-size: 1.2rem;
-  font-family: 'Fira Mono', serif;
   color: white;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 400;
   text-decoration: none;
+  border-radius: 2px;
+  text-transform: uppercase;
   visibility: hidden;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   position: relative;
-  right: 10px;
 }
 
 .siteNav__navItem a {
-  white-space: nowrap;
   overflow: hidden;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .siteNav__navItem a:hover {
@@ -330,19 +335,19 @@ section {
           transform: rotate(900deg);
 }
 
-.siteNav.active .siteNav__siteNav {
-  height: 90vh;
-}
-
 .siteNav.active .siteNav__navBar {
-  height: 90vh;
-  padding-top: 50px;
+  width: 90vh;
+  right: -4px;
 }
 
 .siteNav.active .siteNav__navItem {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
   visibility: visible;
+}
+
+.siteNav.active .siteNav__navItem--home {
+  padding-right: 20px;
 }
 
 .sectionHeading {
@@ -431,6 +436,7 @@ section {
   position: relative;
   margin: auto;
   text-transform: uppercase;
+  padding-bottom: 80px;
 }
 
 .header__titleName::before {
@@ -442,10 +448,10 @@ section {
           animation-name: beforeLineMovement;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   right: 0;
-  bottom: 60%;
+  bottom: 76%;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -459,10 +465,10 @@ section {
           animation-name: afterLineMovement;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   right: 0;
-  bottom: 60%;
+  bottom: 76%;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -470,8 +476,8 @@ section {
 .header__title {
   -webkit-animation-name: rotateHeader;
           animation-name: rotateHeader;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -499,128 +505,143 @@ section {
   text-transform: lowercase;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  position: absolute;
-  right: -10px;
-  bottom: -12%;
+  position: relative;
+  right: -21%;
+  bottom: 98px;
+}
+
+.header__subheadingAnimation {
+  position: relative;
+  bottom: -13%;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
 
 @-webkit-keyframes afterLineMovement {
   0% {
     width: 0;
+    bottom: 76%;
   }
   33.33% {
     width: 100%;
     -webkit-transform: rotate(0);
             transform: rotate(0);
+    bottom: 76%;
   }
   66% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
   }
-  80% {
+  75% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
-    bottom: 58%;
-    right: 4%;
+    bottom: 76%;
+    right: 3%;
   }
   100% {
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
-    width: 10%;
-    right: 43.25%;
-    bottom: -150%;
+    width: 5%;
+    right: 48.5%;
+    bottom: -60%;
   }
 }
 
 @keyframes afterLineMovement {
   0% {
     width: 0;
+    bottom: 76%;
   }
   33.33% {
     width: 100%;
     -webkit-transform: rotate(0);
             transform: rotate(0);
+    bottom: 76%;
   }
   66% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
   }
-  80% {
+  75% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
-    bottom: 58%;
-    right: 4%;
+    bottom: 76%;
+    right: 3%;
   }
   100% {
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
-    width: 10%;
-    right: 43.25%;
-    bottom: -150%;
+    width: 5%;
+    right: 48.5%;
+    bottom: -60%;
   }
 }
 
 @-webkit-keyframes beforeLineMovement {
   0% {
     width: 0;
+    bottom: 76%;
   }
   33.3333% {
     width: 100%;
     -webkit-transform: rotate(0);
             transform: rotate(0);
+    bottom: 76%;
   }
   66% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
   }
-  80% {
+  75% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
-    bottom: 58%;
-    right: 4%;
+    bottom: 76%;
+    right: 3%;
   }
   100% {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    width: 10%;
-    right: 36.75%;
-    bottom: -150%;
+    width: 5%;
+    right: 45.5%;
+    bottom: -60%;
   }
 }
 
 @keyframes beforeLineMovement {
   0% {
     width: 0;
+    bottom: 76%;
   }
   33.3333% {
     width: 100%;
     -webkit-transform: rotate(0);
             transform: rotate(0);
+    bottom: 76%;
   }
   66% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
   }
-  80% {
+  75% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
-    bottom: 58%;
-    right: 4%;
+    bottom: 76%;
+    right: 3%;
   }
   100% {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    width: 10%;
-    right: 36.75%;
-    bottom: -150%;
+    width: 5%;
+    right: 45.5%;
+    bottom: -60%;
   }
 }
 
@@ -689,16 +710,19 @@ section {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  padding: 50px 0;
 }
 
 .about__image {
-  width: 50%;
+  width: 30%;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 
 .about__content {
   position: absolute;
   right: 0;
-  width: 55%;
+  width: 60%;
 }
 
 .skills {
@@ -907,5 +931,85 @@ section {
 
 .contact {
   background-color: #090909;
+}
+
+.contact input, .contact select, .contact textarea {
+  color: white;
+  border: none;
+  padding: 10px;
+  border-bottom: 2px solid #BFFF53;
+  background: #212121;
+  margin: 20px;
+}
+
+.contact label {
+  visibility: hidden;
+  width: 0;
+}
+
+.contact__formContent {
+  padding: 50px 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact__myForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__senderInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__senderInfo input {
+  width: 50%;
+}
+
+.contact__emailContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__button {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: black;
+  background: #BFFF53;
+  border: 2px solid #212121;
+}
+
+.contact__button:hover {
+  color: #BFFF53;
+  background: #212121;
+  border: 2px solid #BFFF53;
 }
 /*# sourceMappingURL=style.css.map */

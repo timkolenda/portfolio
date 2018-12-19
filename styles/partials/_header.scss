@@ -26,6 +26,7 @@
         position: relative;
         margin: auto;
         text-transform: uppercase;
+        padding-bottom: 80px;
         &::before{
             content: "";
             position: absolute;
@@ -33,9 +34,9 @@
             height: 4px;    
             animation-name: beforeLineMovement;
             animation-duration: 6s;
-            animation-delay: 2s;
+            animation-delay: 1s;
             right: 0;
-            bottom: 60%;
+            bottom: 76%;
             animation-fill-mode: forwards; 
         }
         &::after{
@@ -45,16 +46,16 @@
             height: 4px;    
             animation-name: afterLineMovement;
             animation-duration: 6s;
-            animation-delay: 2s;
+            animation-delay: 1s;
             right: 0;
-            bottom: 60%;
+            bottom: 76%;
             animation-fill-mode: forwards; 
         }
     }
     &__title {
         // position: absolute;
         animation-name: rotateHeader;
-        animation-delay: 4s;
+        animation-delay: 3s;
         animation-duration: 2s;
         animation-fill-mode: forwards;
         display: flex;
@@ -70,9 +71,15 @@
         @include secondaryFont(3rem, $primaryAccentColor);
         text-transform: lowercase;
         transform: rotate(-90deg);
-        position: absolute;
-        right: -10px;
-        bottom: -12%;
+        position: relative;
+        right: -21%;
+        bottom: 98px;
+    }
+    &__subheadingAnimation {
+        position: relative;
+        // width: 100%;
+        bottom: -13%;
+        animation-delay: 7s;
     }
 }
 
@@ -86,52 +93,56 @@
 @keyframes afterLineMovement{
     0% {
         width: 0;
+        bottom: 76%
     }
     33.33% {
         width: 100%;
         transform: rotate(0);
+        bottom: 76%;
     }
     66% {
         transform: rotate(-90deg);
         width: 100%;
     }
-    80% {
+    75% {
         transform: rotate(-90deg);
         width: 100%;
-        bottom: 58%;
-        right: 4%;
+        bottom: 76%;
+        right: 3%;
     }
     100% {
         transform: rotate(-135deg);
-        width: 10%;
-        right: 43.25%;
-        bottom: -150%;
+        width: 5%;
+        right: 48.5%;
+        bottom: -60%;
     }
 }
 
 @keyframes beforeLineMovement{
     0% {
         width: 0;
+        bottom: 76%
     }
     33.3333% {
         width: 100%;
         transform: rotate(0);
+        bottom: 76%;
     }
     66% {
         transform: rotate(-90deg);
         width: 100%;
     }
-    80% {
+    75% {
         transform: rotate(-90deg);
         width: 100%;
-        bottom: 58%;
-        right: 4%;
+        bottom: 76%;
+        right: 3%;
     }
     100% {
         transform: rotate(-45deg);
-        width: 10%;
-        right: 36.75%;
-        bottom: -150%
+        width: 5%;
+        right: 45.5%;
+        bottom: -60%
     }
 }
 

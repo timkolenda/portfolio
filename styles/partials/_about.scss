@@ -17,14 +17,16 @@
         display: flex;
         align-items: center;
         position: relative;
+        padding: 50px 0;
     }
     &__image{
-        width: 50%;
+        width: 30%;
+        filter: grayscale(80%);
     }
     &__content{
         position: absolute;
         right: 0;
-        width: 55%;
+        width: 60%;
     }
 }
 
