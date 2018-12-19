@@ -54,3 +54,13 @@
         // padding-top: 10px;
     }
 }
+
+@media(max-width: 800px) {
+    .toolbox {
+        flex-direction: column;
+        &__shelf {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.footer {
+    background: $secondaryColor;
+    text-align: center;
+    .wrapper {
+        display: flex;
+    }
+    &__socialNav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__socialNavList {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__socialNavListItem:hover,
+    &__socialNavListItem:focus {
+        color: $primaryAccentColor;
+    }
+}

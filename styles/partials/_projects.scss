@@ -96,3 +96,29 @@
         }
     }
 }
+
+@media(max-width: 1000px){
+    .projects{
+        &__summery,
+        &__summery.switch{
+            flex-direction: column;
+            .projects__description {
+                text-align: center; 
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 1000px){
+    .projects{
+        &__summery,
+        &__summery.switch{
+            // flex-direction: column;
+            .projects__imageContainer {
+                // text-align: center; 
+                width: 100%;
+            }
+        }
+    }
+}
