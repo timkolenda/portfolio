@@ -175,7 +175,6 @@ body {
   color: white;
   font-weight: 400;
   font-size: 1.6rem;
-  overflow: hidden;
 }
 
 h1 {
@@ -737,10 +736,25 @@ section {
 }
 
 .about__content {
-  position: absolute;
   font-size: 2rem;
-  right: 0;
-  width: 60%;
+  width: 70%;
+  padding: 20px 40px;
+}
+
+@media (max-width: 800px) {
+  .about__section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__content {
+    text-align: center;
+    width: 100%;
+  }
+  .about__image {
+    width: 50%;
+  }
 }
 
 .skills {
@@ -834,6 +848,7 @@ section {
 }
 
 .projects {
+  overflow: hidden;
   background: #212121;
   position: relative;
   padding: 100px 0 100px 0;
@@ -1066,6 +1081,18 @@ section {
   color: #BFFF53;
   background: #212121;
   border: 2px solid #BFFF53;
+}
+
+@media (max-width: 600px) {
+  .contact__senderInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__senderInfo input {
+    width: 100%;
+  }
 }
 
 .footer {

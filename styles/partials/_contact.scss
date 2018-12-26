@@ -59,3 +59,13 @@
     }
 }
 
+@media (max-width: 600px) {
+    .contact {
+        &__senderInfo {
+            flex-direction: column;
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
