@@ -6,6 +6,7 @@ $(function() {
 
 app.init = () => {
     app.openNav();
+    app.focusInNav();
 }
 
 app.openNav = () => {
@@ -14,3 +15,11 @@ app.openNav = () => {
         $('.siteNav').toggleClass('active');
     });
 }
+
+app.focusInNav = () => {
+    $('.siteNav__button').on('click', function() {
+        $('#home').focus();
+    });
+}
+
+
