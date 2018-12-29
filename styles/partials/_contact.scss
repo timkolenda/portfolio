@@ -1,6 +1,7 @@
 
 .contact {
     background-color: $primaryColor;  
+    overflow: hidden;
     input, select, textarea {
         color: $typographyColor;
         border: none;
@@ -16,10 +17,17 @@
     } 
     &__formContent {
         padding: 50px 0;
+        display: flex;
     }
     &__myForm {
         display: flex;
+        flex: 1 0 auto;
         flex-direction: column;
+    }
+    &__aside {
+        background-color: $secondaryColor;
+        width: 20%;
+        height: auto;
     }
     &__senderInfo {
         display: flex;
