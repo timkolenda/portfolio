@@ -3,19 +3,20 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    overflow: hidden;
     &__button {
         background: none;
         border: none;
         padding: 0;
         position: fixed;
-        right: 20px;
+        right: 25px;
         z-index: 9;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         width: 50px;
         height: 50px;
-        margin: 20px 0px 0 0;  
+        margin: 25px 0px 0 0;  
         transition: all 1s;
         &:hover {
             cursor: pointer;    
@@ -54,6 +55,7 @@
         transition: all 1s;
         transform: rotate(-90deg);
         margin-top: 100%;
+        overflow: hidden;
     }
     &__navItem {
         color: white;
@@ -74,6 +76,9 @@
     
     &.active {
         .siteNav {
+            &__button {
+                margin-top: 0;
+            }
             &__navWheel {
                 width: 25px;
                 height: 25px;
@@ -81,7 +86,6 @@
             }
             &__chevron {
                 transform: rotate(900deg);
-                // transform: rotate(900deg) translateX(-50%) translateY(50%);
             }
             &__siteNav{
                 // right: -4px;
@@ -95,7 +99,6 @@
                 // padding-top: 50px;                
             }
             &__navItem {
-                // transform: rotate(-90deg);
                 transition-delay: 1s;
                 visibility: visible;
                 &--home{
@@ -107,14 +110,23 @@
 }
 
 
-@media(max-width: 400px) {
+@media(max-width: 600px) {
     .siteNav {
         &__button {
             right: 5px;
+            margin-right: 0;
         }
         &__navWheel {
             right: 5px;
+            margin-right: 0;
         }
+        &__navItem {
+            a {
+                padding: 0;
+                padding-top: 20px;
+            }
+        }
+
     }
 }
 
