@@ -81,11 +81,16 @@
         bottom: -13%;
         animation-delay: 7s;
     }
+    // &__socialNav {
+    //     // position: absolute;
+    //     display: flex;
+    //     // transform: rotate(-90deg);
+    // }
     &__nextPage{
         // background: red;
         position: relative;
         left: 47.5%;
-        bottom: 10%;
+        bottom: 17%;
         z-index: 9;
         width: 50px;
         height: 50px;
@@ -133,7 +138,7 @@
         transform: rotate(-135deg);
         width: 5%;
         right: 48.5%;
-        bottom: -60%;
+        bottom: -40%;
     }
 }
 
@@ -161,7 +166,7 @@
         transform: rotate(-45deg);
         width: 5%;
         right: 45.5%;
-        bottom: -60%
+        bottom: -40%
     }
 }
 

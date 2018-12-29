@@ -18,7 +18,7 @@ app.openNav = () => {
 
 app.focusInNav = () => {
     $('.siteNav__button').on('click', function() {
-        $('#home').focus();
+        $('.siteNav__nav').focus();
     });
 }
 
